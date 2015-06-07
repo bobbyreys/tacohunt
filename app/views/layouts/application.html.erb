@@ -10,6 +10,7 @@
 <body>
 	<%= render 'layouts/navbar' %>
 	<div class="container-fluid">
+	
 	<% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
         <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissable">
@@ -18,6 +19,7 @@
         </div>
       <% end %>
     <% end %> 
+    
 	<%= yield %>
 	<%= render 'layouts/footer' %>
 	</div>
